@@ -49,7 +49,7 @@ case $choice in
     npm install
 
     echo -e "${YELLOW}Web텔레그렘에 접속후 F12를 누르시고 게임을 실행하세요${NC}"
-    read -p "애플리케이션-세션저장소-Birds와 관련된 URL클릭 후 나오는 UserID나 QueryID를 적어두세요 (엔터) : "
+    read -p "애플리케이션-세션저장소-timefarm과 관련된 URL클릭 후 나오는 UserID나 QueryID를 적어두세요 (엔터) : "
     echo -e "${GREEN}다계정의 query_id를 입력할 경우 줄바꿈으로 구분하세요.${NC}"
     echo -e "${GREEN}입력을 마치려면 엔터를 두 번 누르세요.${NC}"
     echo -e "${YELLOW}Userid를 입력하세요(user= 또는 query_id= 포함해서 입력):${NC}"
@@ -108,7 +108,7 @@ case $choice in
     ;;
     
   2)
-    echo -e "${GREEN}Bird 봇을 재실행합니다.${NC}"
+    echo -e "${GREEN}봇을 재실행합니다.${NC}"
     
     # nvm을 로드합니다
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # nvm을 로드합니다
