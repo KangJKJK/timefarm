@@ -104,7 +104,8 @@ case $choice in
     } > "$WORK/bot/config/proxies.js"
     
     # 봇 구동
-    node  node index.js
+    cd "$WORK"
+    node node index.js
     ;;
     
   2)
@@ -115,7 +116,7 @@ case $choice in
     cd "$WORK"
 
     # 봇 구동
-    node  node index.js
+    node node index.js
     ;;
 
   *)
