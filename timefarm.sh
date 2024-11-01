@@ -101,7 +101,7 @@ case $choice in
         done
         echo "];"  # 배열 끝
         echo "module.exports = proxies;"  # 모듈 내보내기
-    } > "$WORK/config/proxies.js"
+    } > "$WORK/bot/config/proxies.js"
     
     # 봇 구동
     node  node index.js
