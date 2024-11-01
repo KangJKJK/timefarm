@@ -37,7 +37,7 @@ case $choice in
 
     # GitHub에서 코드 복사
     echo -e "${YELLOW}GitHub에서 코드 복사 중...${NC}"
-    git clone https://github.com/Bachtran301/Birds-Sui.git
+    git clone https://github.com/Freddywhest/TimeFarmBot.git
     cd "$WORK"
 
     # Node.js LTS 버전 설치 및 사용
