@@ -89,7 +89,7 @@ case $choice in
             [[ -z "$line" ]] && break
             # 입력된 프록시 정보를 파싱하여 형식에 맞게 변환
             IFS='@' read -r userpass hostport <<< "$line"
-            IFS=':' read -r username password <<< "$userpass"
+            IFS=':' read -r username password <<< "${userpass//http:}"  # 'http:' 제거
             IFS=':' read -r ip port <<< "$hostport"
             echo "  {"
             echo "    ip: \"$ip\","
