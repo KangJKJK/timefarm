@@ -53,17 +53,17 @@ case $choice in
     echo -e "${GREEN}다계정의 query_id를 입력할 경우 줄바꿈으로 구분하세요.${NC}"
     echo -e "${GREEN}입력을 마치려면 엔터를 두 번 누르세요.${NC}"
     echo -e "${YELLOW}Userid를 입력하세요(user= 또는 query_id= 포함해서 입력):${NC}"
-    
-    # 쿼리 파일 생성 및 초기화
-    {
-        echo "["  # JSON 배열 시작
-        while IFS= read -r line; do
-            [[ -z "$line" ]] && break
-            echo "  \"$line\","  # 각 줄을 JSON 문자열로 변환
-        done
-        echo "]"  # JSON 배열 끝
-    } > "$WORK/queryIds.json"
-    
+
+   # 쿼리 파일 생성 및 초기화
+  {
+      echo "{"  # JSON 객체 시작
+      while IFS= read -r line; do
+          [[ -z "$line" ]] && break
+          echo "  \"$line\": \"$line\","  # 각 줄을 키-값 쌍으로 변환
+      done | sed '$ s/,$//'  # 마지막 줄의 쉼표 제거
+      echo "}"  # JSON 객체 끝
+  } > "$WORK/queryIds.json"
+
     # .env파일 생성
     {
         echo "API_ID=FALSE"
