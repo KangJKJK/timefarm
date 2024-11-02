@@ -105,7 +105,7 @@ case $choice in
     
     # 봇 구동
     cd "$WORK"
-    node node index.js
+    node index.js
     ;;
     
   2)
@@ -116,7 +116,7 @@ case $choice in
     cd "$WORK"
 
     # 봇 구동
-    node node index.js
+    node index.js
     ;;
 
   *)
