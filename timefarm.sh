@@ -40,12 +40,12 @@ case $choice in
     git clone https://github.com/Freddywhest/TimeFarmBot.git
     cd "$WORK"
 
-    # Node.js LTS 버전 설치 및 사용
+    # Node.js 20 버전 설치 및 사용
     echo -e "${YELLOW}Node.js LTS 버전을 설치하고 설정 중...${NC}"
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # nvm을 로드합니다
-    nvm install --lts
-    nvm use --lts
+    nvm install 20 # 20.x 버전 설치
+    nvm use 20     # 20.x 버전 사용
     npm install
 
     echo -e "${YELLOW}Web텔레그렘에 접속후 F12를 누르시고 게임을 실행하세요${NC}"
